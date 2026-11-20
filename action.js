@@ -1,4 +1,3 @@
-
 // Store all registered participants in an array.
 let participants = [];
 
@@ -19,6 +18,9 @@ const winnerDisplay = document.getElementById("winner-display");
 
 // Get the draw button from the HTML.
 const drawButton = document.getElementById("draw-button");
+
+// Get the reset button from the HTML.
+const resetButton = document.getElementById("reset-button");
 
 
 // Listen for when someone submits the registration form.
@@ -79,6 +81,14 @@ function updateParticipantsList() {
     // Clear the current participant list.
     participantsList.innerHTML = "";
 
+    // Check if there are no participants.
+    if (participants.length === 0) {
+
+        // Display a message when the list is empty.
+        participantsList.innerHTML = '<li class="empty-message">No participants yet. Be the first!</li>';
+
+    }
+
     // Loop through every participant in the array.
     participants.forEach(function(participant, index) {
 
@@ -123,5 +133,23 @@ drawButton.addEventListener("click", function() {
 
     // Display the winner's name with cake and party emojis.
     winnerDisplay.innerHTML = "<div class='winner-name'>🎂 " + winner + " 🎉</div>";
+
+});
+
+
+// Listen for clicks on the reset button.
+resetButton.addEventListener("click", function() {
+
+    // Set the number of participants in the array to zero.
+    participants.length = 0;
+
+    // Update the participants list and counter.
+    updateParticipantsList();
+
+    // Clear the winner display and show the default message.
+    winnerDisplay.innerHTML = "<p>Waiting for the draw...</p>";
+
+    // Clear the name input field.
+    participantInput.value = "";
 
 });

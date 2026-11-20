@@ -28,6 +28,13 @@ body {
     margin-bottom: 5px;
 }
 
+/* Style the Google Material cake icon */
+.header h1 .material-icons {
+    font-size: 36px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
 /* Style the header description */
 .header p {
     font-size: 15px;
@@ -219,7 +226,29 @@ body {
     opacity: 0.7;
 }
 
-/* Style the text below the draw button */
+/* Style the reset button */
+#reset-button {
+    width: 100%;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 12px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Change the reset button color when hovering */
+#reset-button:hover {
+    background-color: #1367c0;
+    transform: translateY(-2px);
+}
+
+/* Style the text below the buttons */
 .draw-section p {
     color: #999999;
     font-size: 12px;
@@ -231,6 +260,11 @@ body {
 
     /* Reduce the header title size on mobile */
     .header h1 {
+        font-size: 28px;
+    }
+
+    /* Reduce the cake icon size on mobile */
+    .header h1 .material-icons {
         font-size: 28px;
     }
 

@@ -14,13 +14,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Import Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
 
     <!-- Main header section -->
     <header class="header">
-        <h1>🎂 Cake Raffle</h1>
+        <h1>
+            <span class="material-icons">cake</span>
+            Cake Raffle
+        </h1>
+
         <p>Enter your name and get a chance to win!</p>
     </header>
 
@@ -89,11 +97,16 @@
 
         </section>
 
-        <!-- Draw button section -->
+        <!-- Draw and Reset buttons section -->
         <section class="draw-section">
 
             <button id="draw-button" disabled>
                 🎉 DRAW WINNER
+            </button>
+
+            <!-- Reset button to start a new raffle -->
+            <button id="reset-button">
+                🔄 RESET RAFFLE
             </button>
 
             <p>Good luck to everyone participating!</p>
