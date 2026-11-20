@@ -1,0 +1,258 @@
+/* Set the default styles for the entire page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the main body and background */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff0f5;
+    color: #333333;
+    min-height: 100vh;
+}
+
+/* Style the main header */
+.header {
+    background-color: #ff4081;
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+/* Style the main header title */
+.header h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+/* Style the header description */
+.header p {
+    font-size: 15px;
+    opacity: 0.95;
+}
+
+/* Style the main application container */
+.container {
+    width: 90%;
+    max-width: 650px;
+    margin: 35px auto;
+}
+
+/* Style each main section */
+.container section {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Style section titles */
+.container h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Style section descriptions */
+.section-description {
+    color: #777777;
+    font-size: 14px;
+    margin-bottom: 18px;
+}
+
+/* Arrange the registration form elements */
+#participant-form {
+    display: flex;
+    gap: 10px;
+}
+
+/* Style the participant name input */
+#participant-name {
+    flex: 1;
+    min-width: 0;
+    padding: 13px;
+    border: 2px solid #eeeeee;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Highlight the input when selected */
+#participant-name:focus {
+    border-color: #ff4081;
+}
+
+/* Style the add participant button */
+#add-button {
+    background-color: #ff4081;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Change the add button color when hovering */
+#add-button:hover {
+    background-color: #e91e63;
+}
+
+/* Arrange the participants heading */
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Style the participant counter */
+#participant-count {
+    background-color: #ffe0ec;
+    color: #e91e63;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Remove default list styling */
+#participants-list {
+    list-style: none;
+}
+
+/* Style individual participant entries */
+#participants-list li {
+    background-color: #fff5f8;
+    border: 1px solid #ffe0ec;
+    padding: 12px 15px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Style the empty participant message */
+#participants-list .empty-message {
+    color: #999999;
+    text-align: center;
+    background-color: #fafafa;
+    border: 1px dashed #dddddd;
+}
+
+/* Style the winner section */
+.winner-section {
+    text-align: center;
+    border: 2px dashed #ff80ab;
+}
+
+/* Style the winner section heading */
+.winner-section h2 {
+    color: #e91e63;
+    margin-bottom: 15px;
+}
+
+/* Style the winner display area */
+#winner-display {
+    background-color: #fff0f5;
+    border-radius: 12px;
+    padding: 25px 15px;
+    min-height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style the default winner message */
+#winner-display p {
+    color: #999999;
+    font-size: 14px;
+}
+
+/* Style the selected winner name */
+#winner-display .winner-name {
+    color: #e91e63;
+    font-size: 25px;
+    font-weight: 800;
+    text-align: center;
+}
+
+/* Style the draw button section */
+.draw-section {
+    text-align: center;
+}
+
+/* Style the main draw button */
+#draw-button {
+    width: 100%;
+    background-color: #ff4081;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 17px;
+    font-family: inherit;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Change the draw button appearance when hovering */
+#draw-button:hover:not(:disabled) {
+    background-color: #e91e63;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(233, 30, 99, 0.25);
+}
+
+/* Style the draw button when disabled */
+#draw-button:disabled {
+    background-color: #f5b4cb;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+/* Style the text below the draw button */
+.draw-section p {
+    color: #999999;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* Adjust the application for smaller screens */
+@media (max-width: 500px) {
+
+    /* Reduce the header title size on mobile */
+    .header h1 {
+        font-size: 28px;
+    }
+
+    /* Stack the registration form on mobile */
+    #participant-form {
+        flex-direction: column;
+    }
+
+    /* Make the add button fill the available width */
+    #add-button {
+        width: 100%;
+    }
+
+    /* Reduce the main container width on mobile */
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    /* Reduce section padding on mobile */
+    .container section {
+        padding: 18px;
+    }
+
+}

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cake Raffle</title>
+
+    <!-- Connect the CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Import Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Main header section -->
+    <header class="header">
+        <h1>🎂 Cake Raffle</h1>
+        <p>Enter your name and get a chance to win!</p>
+    </header>
+
+    <!-- Main application container -->
+    <main class="container">
+
+        <!-- Participant registration section -->
+        <section class="registration-section">
+
+            <h2>Join the Raffle!</h2>
+
+            <p class="section-description">
+                Enter your name below to participate in the raffle.
+            </p>
+
+            <!-- Registration form -->
+            <form id="participant-form">
+
+                <input
+                    type="text"
+                    id="participant-name"
+                    placeholder="Enter your full name..."
+                    autocomplete="off"
+                    required
+                >
+
+                <button type="submit" id="add-button">
+                    + Add Participant
+                </button>
+
+            </form>
+
+        </section>
+
+        <!-- Participants list section -->
+        <section class="participants-section">
+
+            <div class="section-heading">
+                <h2>Participants</h2>
+
+                <span id="participant-count">0 participants</span>
+            </div>
+
+            <!-- Names will be displayed here using JavaScript -->
+            <ul id="participants-list">
+
+                <li class="empty-message">
+                    No participants yet. Be the first!
+                </li>
+
+            </ul>
+
+        </section>
+
+        <!-- Winner display section -->
+        <section class="winner-section">
+
+            <h2>🏆 Raffle Winner</h2>
+
+            <!-- The winner's name will appear here -->
+            <div id="winner-display">
+
+                <p>Waiting for the draw...</p>
+
+            </div>
+
+        </section>
+
+        <!-- Draw button section -->
+        <section class="draw-section">
+
+            <button id="draw-button" disabled>
+                🎉 DRAW WINNER
+            </button>
+
+            <p>Good luck to everyone participating!</p>
+
+        </section>
+
+    </main>
+
+    <!-- Connect the JavaScript file -->
+    <script src="action.js"></script>
+
+</body>
+
+</html>
